@@ -1,14 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  padding: 48px;
-  line-height: 1.6;
+  background: #f7f7f7;
+  color: #222;
 }
 
-main {
-  max-width: 700px;
-  margin: 0 auto;
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 10%;
+  background: white;
 }
 
-h1 {
-  font-size: 48px;
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+button {
+  width: 160px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
 }
