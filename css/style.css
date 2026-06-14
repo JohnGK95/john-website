@@ -43,3 +43,54 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin-top: 32px;
+}
+
+.language-card {
+  display: block;
+  padding: 24px;
+  background: white;
+  color: #222;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.page h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.page h2 {
+  font-size: 28px;
+  margin-top: 32px;
+  color: #444;
+}
+
+.notes-box {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-top: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
