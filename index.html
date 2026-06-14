@@ -27,6 +27,27 @@
       </p>
     </section>
 
+    <section id="calendar">
+      <h2>Events</h2>
+
+      <form id="event-form">
+        <input id="event-date" type="date" required />
+
+        <input
+          id="event-title"
+          type="text"
+          placeholder="Event name..."
+          required
+        />
+
+        <textarea id="event-notes" placeholder="Notes..."></textarea>
+
+        <button type="submit">Add</button>
+      </form>
+
+      <ul id="event-list"></ul>
+    </section>
+
     <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
   </body>
