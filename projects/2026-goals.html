@@ -10,14 +10,37 @@
     <div id="navbar"></div>
 
     <main class="page">
-      <h1>2026 Goals</h1>
+      <div class="page-header">
+        <h1>2026 Goals</h1>
 
-      <div class="notes-box">
-        <h2>Notes</h2>
+        <button id="show-goal-form" type="button">+ Add Goal</button>
       </div>
+
+      <div id="goal-form-panel" class="notes-box hidden">
+        <h2>Add Goal</h2>
+
+        <form id="goal-form" class="goal-form">
+          <input
+            id="goal-title"
+            type="text"
+            placeholder="Goal name..."
+            required
+          />
+
+          <textarea
+            id="goal-description"
+            placeholder="Goal description..."
+          ></textarea>
+
+          <button type="submit">Save Goal</button>
+        </form>
+      </div>
+
+      <div id="goal-list"></div>
     </main>
 
     <script src="../js/navbar.js"></script>
+    <script src="../js/goals.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
