@@ -43,7 +43,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
-.language-grid {
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
@@ -51,7 +51,7 @@ button {
   margin-top: 32px;
 }
 
-.language-card {
+.card {
   display: block;
   padding: 24px;
   background: white;
@@ -66,7 +66,7 @@ button {
     box-shadow 0.2s ease;
 }
 
-.language-card:hover {
+.card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
