@@ -1,12 +1,29 @@
-document.getElementById("navbar").innerHTML = `
-  <nav>
-    <h2>John Kerlagon</h2>
+const navbar = document.getElementById("navbar");
 
-    <div>
-      <a href="/index.html">Home</a>
-      <a href="/languages/index.html">Languages</a>
-      <a href="/projects/index.html">Projects</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </nav>
-`;
+if (navbar) {
+  navbar.innerHTML = `
+    <nav>
+      <h2>John Kerlagon</h2>
+
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/languages/index.html">Languages</a>
+        <a href="/projects/index.html">Projects</a>
+        <a href="/contact.html">Contact</a>
+        <button id="theme-toggle" type="button">🌙</button>
+      </div>
+    </nav>
+  `;
+
+  const themeToggle = document.getElementById("theme-toggle");
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      themeToggle.textContent = "☀️";
+    } else {
+      themeToggle.textContent = "🌙";
+    }
+  });
+}
