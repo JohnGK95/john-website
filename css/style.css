@@ -9,6 +9,13 @@ body {
   color: #222;
 }
 
+button {
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Navbar */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -45,9 +52,49 @@ nav a {
   flex-shrink: 0;
 }
 
+/* General Page Layout */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.page h1 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.page h2 {
+  font-size: 28px;
+  margin-top: 32px;
+  color: #444;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
 section {
   padding: 80px 10%;
 }
+
+.notes-box {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-top: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Homepage */
 
 .hero {
   min-height: 70vh;
@@ -60,22 +107,20 @@ section {
   font-size: 60px;
 }
 
-button {
-  border-radius: 8px;
-  cursor: pointer;
-}
+/* Cards */
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
   margin-top: 32px;
 }
 
 .card {
-  display: block;
-  padding: 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 22px;
   background: white;
   color: #222;
   text-decoration: none;
@@ -93,79 +138,38 @@ button {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-.page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 48px 24px;
-}
+/* Events */
 
-.page h1 {
-  font-size: 48px;
-  margin-bottom: 12px;
-}
-
-.page h2 {
-  font-size: 28px;
-  margin-top: 32px;
-  color: #444;
-}
-
-.notes-box {
-  background: white;
-  border-radius: 16px;
-  padding: 32px;
+#event-form {
+  display: grid;
+  grid-template-columns: 200px 300px;
+  gap: 16px;
+  max-width: 600px;
   margin-top: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.dark-mode {
-  background: #121212;
-  color: #f5f5f5;
+#event-form input,
+#event-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
 }
 
-.dark-mode nav {
-  background: #1e1e1e;
+#event-form textarea {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
 }
 
-.dark-mode nav a,
-.dark-mode nav h2 {
-  color: #f5f5f5;
+#event-form button {
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: auto;
+  padding: 10px 20px;
 }
 
-.dark-mode .card,
-.dark-mode .notes-box {
-  background: #1e1e1e;
-  color: #f5f5f5;
-}
-
-.dark-mode .page h2 {
-  color: #dddddd;
-}
-
-.dark-mode #theme-toggle {
-  background: #444;
-}
-
-@media (max-width: 700px) {
-  nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  section {
-    padding: 48px 24px;
-  }
-}
 #event-list {
   margin-top: 24px;
   padding-left: 0;
@@ -178,14 +182,13 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-
   background: white;
   padding: 20px 24px;
   border-radius: 14px;
   margin-bottom: 14px;
 }
 
-.event-item div {
+.event-info {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -193,28 +196,6 @@ button {
 
 .event-item strong {
   font-size: 18px;
-}
-
-.event-item span {
-  color: #444;
-}
-
-.delete-event {
-  padding: 8px 12px;
-}
-#event-form {
-  display: grid;
-  grid-template-columns: 200px 300px;
-  gap: 16px;
-
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-.event-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
 .event-title {
@@ -226,47 +207,18 @@ button {
   color: #666;
   line-height: 1.5;
 }
-#event-form {
-  display: grid;
-  grid-template-columns: 200px 300px;
-  gap: 16px;
 
-  max-width: 600px;
-  margin-top: 20px;
+.delete-event {
+  padding: 8px 12px;
 }
 
-#event-form input {
-  padding: 12px;
+/* Goals */
 
-  border: 1px solid #ccc;
-  border-radius: 8px;
-
-  font-family: inherit;
-}
-
-#event-form textarea {
-  grid-column: 1 / -1;
-
-  width: 100%;
-  min-height: 100px;
-
-  padding: 12px;
-
-  border: 1px solid #ccc;
-  border-radius: 8px;
-
-  font-family: inherit;
-  resize: vertical;
-}
-
-#event-form button {
-  grid-column: 1 / -1;
-
-  justify-self: end;
-
+#show-goal-form {
   width: auto;
-  padding: 10px 20px;
+  padding: 10px 18px;
 }
+
 .goal-form,
 .milestone-form {
   display: grid;
@@ -289,10 +241,26 @@ button {
 
 .goal-card {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
-  margin-top: 28px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin-top: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.goal-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.goal-summary-main {
+  flex: 1;
+}
+
+.goal-summary h2 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
 }
 
 .goal-header {
@@ -309,13 +277,17 @@ button {
 .progress-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin: 24px 0;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.progress-row.compact {
+  margin: 16px 0 0;
 }
 
 .progress-bar {
   flex: 1;
-  height: 14px;
+  height: 10px;
   background: #e5e5e5;
   border-radius: 999px;
   overflow: hidden;
@@ -325,6 +297,31 @@ button {
   height: 100%;
   background: #333;
   transition: width 0.3s ease;
+}
+
+.toggle-details {
+  width: auto;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.goal-details {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #ddd;
+}
+
+.goal-description-area {
+  margin-bottom: 28px;
+}
+
+.goal-description-area h3,
+.milestone-section h3 {
+  margin-bottom: 12px;
+}
+
+.milestone-section {
+  margin-top: 24px;
 }
 
 .milestone-list {
@@ -352,17 +349,6 @@ button {
   padding: 8px 12px;
 }
 
-.dark-mode .goal-card {
-  background: #1e1e1e;
-}
-
-.dark-mode .progress-bar {
-  background: #333;
-}
-
-.dark-mode .progress-fill {
-  background: #f5f5f5;
-}
 .goal-edit-area {
   display: grid;
   gap: 16px;
@@ -380,83 +366,19 @@ button {
   min-height: 100px;
   resize: vertical;
 }
-.hidden {
-  display: none;
-}
 
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-#show-goal-form {
-  width: auto;
-  padding: 10px 18px;
-}
-
-.goal-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-.goal-summary-main {
-  flex: 1;
-}
-
-.progress-row.compact {
-  margin: 16px 0 0;
-}
-
-.toggle-details {
-  width: auto;
-  padding: 8px 12px;
-}
-
-.goal-details {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid #ddd;
-}
-
-.goal-description-area {
-  margin-bottom: 28px;
-}
-
-.goal-description-area h3,
-.milestone-section h3 {
-  margin-bottom: 12px;
-}
-
-.milestone-section {
-  margin-top: 24px;
-}
-
-.dark-mode .goal-details {
-  border-top-color: #333;
-}
 .icon-button {
   width: 36px;
   height: 36px;
-
   padding: 0;
-
   border: none;
   border-radius: 50%;
-
   background: #eeeeee;
-
   cursor: pointer;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   font-size: 16px;
-
   transition: transform 0.2s ease;
 }
 
@@ -464,6 +386,87 @@ button {
   transform: scale(1.1);
 }
 
+/* Dark Mode */
+
+.dark-mode {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode nav {
+  background: #1e1e1e;
+}
+
+.dark-mode nav a,
+.dark-mode nav h2 {
+  color: #f5f5f5;
+}
+
+.dark-mode .card,
+.dark-mode .notes-box,
+.dark-mode .event-item,
+.dark-mode .goal-card {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode .page h2 {
+  color: #dddddd;
+}
+
+.dark-mode .event-notes {
+  color: #cccccc;
+}
+
+.dark-mode #theme-toggle,
 .dark-mode .icon-button {
   background: #333;
+}
+
+.dark-mode .progress-bar {
+  background: #333;
+}
+
+.dark-mode .progress-fill {
+  background: #f5f5f5;
+}
+
+.dark-mode .goal-details {
+  border-top-color: #333;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  section {
+    padding: 48px 24px;
+  }
+
+  .page-header,
+  .goal-summary,
+  .goal-header,
+  .event-item,
+  .milestone-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #event-form {
+    grid-template-columns: 1fr;
+  }
 }
