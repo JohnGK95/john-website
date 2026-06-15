@@ -1,52 +1,57 @@
 <!doctype html>
+
 <html lang="en">
   <head>
-    <title>John Kerlagon</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <div id="navbar"></div>
 
-    <section class="hero">
-      <h1>Hello, I'm John 👋</h1>
+    <main class="page dashboard-page">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+      </div>
 
-      <p>
-        Revenue Operations professional living in Taipei. Interested in
-        technology, languages, and building useful things.
-      </p>
+      <div class="dashboard-grid">
+        <a class="dashboard-card dashboard-events" href="#calendar">Events</a>
+        <a
+          class="dashboard-card dashboard-goals"
+          href="projects/2026-goals.html"
+          >2026 Goals</a
+        >
+        <a
+          class="dashboard-card dashboard-languages"
+          href="languages/index.html"
+          >Languages</a
+        >
+        <a class="dashboard-card dashboard-projects" href="projects/index.html"
+          >Projects</a
+        >
+      </div>
 
-      <button>View My Work</button>
-    </section>
+      <section id="calendar" class="dashboard-section">
+        <h2>Events</h2>
 
-    <section id="about">
-      <h2>About Me</h2>
+        <form id="event-form">
+          <input id="event-start-date" type="date" required />
+          <input id="event-end-date" type="date" />
+          <input
+            id="event-title"
+            type="text"
+            placeholder="Event name..."
+            required
+          />
 
-      <p>
-        I work at the intersection of business operations, data, and technology.
-      </p>
-    </section>
+          <textarea id="event-notes" placeholder="Notes..."></textarea>
 
-    <section id="calendar">
-      <h2>Events</h2>
+          <button type="submit">Add Event</button>
+        </form>
 
-      <form id="event-form">
-        <input id="event-start-date" type="date" required />
-        <input id="event-end-date" type="date" />
-        <input
-          id="event-title"
-          type="text"
-          placeholder="Event name..."
-          required
-        />
-
-        <textarea id="event-notes" placeholder="Notes..."></textarea>
-
-        <button type="submit">Add Event</button>
-      </form>
-
-      <ul id="event-list"></ul>
-    </section>
+        <ul id="event-list"></ul>
+      </section>
+    </main>
 
     <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
