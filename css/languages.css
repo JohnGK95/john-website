@@ -29,3 +29,66 @@
 .german-theme {
   --language-accent: #6f5b3e;
 }
+#vocab-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.vocab-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 8px solid var(--language-accent);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.vocab-card h3 {
+  margin-top: 0;
+  color: var(--language-accent);
+}
+
+.dark-mode .vocab-card {
+  background: #1d2723;
+  color: #f5f1e8;
+  border-color: #31443d;
+}
+.daily-word-card {
+  margin: 16px 0 24px;
+  padding: 20px;
+  background: white;
+  border-left: 8px solid var(--language-accent);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.daily-word-card h4 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: var(--language-accent);
+}
+
+.dark-mode .daily-word-card {
+  background: #1d2723;
+}
+.learned-word-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.learned-word-check input {
+  width: 18px;
+  height: 18px;
+}
+
+.vocab-link-card {
+  min-height: auto;
+  display: inline-flex;
+  width: auto;
+  padding: 12px 18px;
+  margin-top: 20px;
+}

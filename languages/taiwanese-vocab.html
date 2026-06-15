@@ -18,11 +18,20 @@
 
       <div class="notes-box">
         <h2>Vocabulary List</h2>
-        <p>This is where your Taiwanese vocabulary entries will live.</p>
+
+        <input id="vocab-upload" type="file" accept=".csv" />
+
+        <div id="vocab-list"></div>
       </div>
     </main>
 
     <script src="../js/navbar.js"></script>
+
+    <script>
+      const vocabLanguage = "taiwanese";
+    </script>
+
+    <script src="../js/vocabulary.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

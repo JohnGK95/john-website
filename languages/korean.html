@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <title>Korean</title>
@@ -10,15 +11,33 @@
 
     <main class="page">
       <h1>Korean</h1>
-      <div class="card-grid">
-        <a class="card" href="korean-vocab.html">Vocabulary List</a>
+
+      <div class="notes-box">
+        <h2>Vocabulary</h2>
+
+        <p id="vocab-count">0 words saved</p>
+
+        <div id="daily-word-preview"></div>
+
+        <a class="card vocab-link-card" href="korean-vocab.html">
+          Open Vocabulary List
+        </a>
       </div>
+
       <div class="notes-box">
         <h2>Notes</h2>
+
+        <p>Study notes, grammar explanations, and resources will live here.</p>
       </div>
     </main>
 
     <script src="../js/navbar.js"></script>
+
+    <script>
+      const vocabLanguage = "korean";
+    </script>
+
+    <script src="../js/language-overview.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
