@@ -1,0 +1,21 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.card {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  background: white;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(34, 75, 64, 0.08);
+  border: 1px solid var(--border);
+}

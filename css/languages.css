@@ -1,0 +1,31 @@
+.language-page .notes-box {
+  border-left: 8px solid var(--language-accent);
+}
+
+.language-page .page h1 {
+  color: var(--language-accent);
+}
+
+.mandarin-theme {
+  --language-accent: #b23a2f;
+}
+
+.japanese-theme {
+  --language-accent: #394867;
+}
+
+.taiwanese-theme {
+  --language-accent: #224b40;
+}
+
+.korean-theme {
+  --language-accent: #5f8fa8;
+}
+
+.french-theme {
+  --language-accent: #8d7aa9;
+}
+
+.german-theme {
+  --language-accent: #6f5b3e;
+}

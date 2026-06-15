@@ -1,0 +1,133 @@
+#show-goal-form {
+  width: auto;
+  padding: 10px 18px;
+}
+
+.goal-form,
+.milestone-form,
+.goal-edit-area {
+  display: grid;
+  gap: 16px;
+}
+
+.goal-form input,
+.goal-form textarea,
+.milestone-form input,
+.edit-goal-title,
+.edit-goal-description {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  background: white;
+}
+
+.goal-form textarea,
+.edit-goal-description {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.goal-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin-top: 16px;
+  box-shadow: 0 6px 18px rgba(34, 75, 64, 0.08);
+  border: 1px solid var(--border);
+}
+
+.goal-summary,
+.goal-header,
+.milestone-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.goal-summary-main {
+  flex: 1;
+}
+
+.goal-summary h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.goal-actions,
+.milestone-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 360px;
+  margin: 8px 0;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 10px;
+  background: #e5ded1;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--forest);
+  transition: width 0.4s ease;
+}
+
+.toggle-details,
+.goal-card button,
+.milestone-form button {
+  width: auto;
+  padding: 8px 12px;
+}
+
+.goal-details {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.goal-description-area {
+  margin-bottom: 28px;
+}
+
+.goal-description-area p {
+  color: var(--muted);
+}
+
+.milestone-section {
+  margin-top: 24px;
+}
+
+.milestone-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.milestone-item label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  background: #eee4d5;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

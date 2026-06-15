@@ -1,0 +1,48 @@
+.dark-mode {
+  background: #121816;
+  color: #f5f1e8;
+}
+
+.dark-mode nav,
+.dark-mode .dashboard-section,
+.dark-mode .dashboard-card,
+.dark-mode .card,
+.dark-mode .event-card,
+.dark-mode .goal-card,
+.dark-mode .notes-box {
+  background: #1d2723;
+  color: #f5f1e8;
+  border-color: #31443d;
+}
+
+.dark-mode nav a,
+.dark-mode nav h2,
+.dark-mode .page h1,
+.dark-mode .page h2,
+.dark-mode section h2 {
+  color: #f5f1e8;
+}
+
+.dark-mode .event-date,
+.dark-mode .event-notes,
+.dark-mode .goal-description-area p {
+  color: #cfc8ba;
+}
+
+.dark-mode #theme-toggle,
+.dark-mode .icon-button {
+  background: #31443d;
+  color: white;
+}
+
+.dark-mode .progress-bar {
+  background: #31443d;
+}
+
+.dark-mode .progress-fill {
+  background: var(--matcha);
+}
+
+.dark-mode .goal-details {
+  border-top-color: #333;
+}
