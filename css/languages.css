@@ -92,3 +92,137 @@
   padding: 12px 18px;
   margin-top: 20px;
 }
+.note-form {
+  display: grid;
+  gap: 14px;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+.note-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.note-form button {
+  width: auto;
+  justify-self: end;
+  padding: 10px 18px;
+}
+
+#note-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.note-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  border-left: 8px solid var(--language-accent);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.note-card h3 {
+  margin-top: 0;
+  color: var(--language-accent);
+}
+
+.note-tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--cream);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.dark-mode .note-card {
+  background: #1d2723;
+}
+
+.dark-mode .note-tag {
+  background: #31443d;
+}
+.note-edit-area {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.edit-note-title,
+.edit-note-content,
+.edit-note-tag {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+.edit-note-content {
+  min-height: 120px;
+  resize: vertical;
+}
+.pinned-note {
+  border-left-color: var(--cinnamon);
+}
+
+.note-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pinned-label {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--cinnamon);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.note-updated {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dark-mode .note-updated {
+  color: #cfc8ba;
+}
+.note-filter {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.note-filter select {
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border);
+
+  font-family: inherit;
+}

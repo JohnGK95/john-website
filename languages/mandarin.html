@@ -26,8 +26,37 @@
 
       <div class="notes-box">
         <h2>Notes</h2>
+        <div class="note-filter">
+          <label for="note-tag-filter"> Filter by tag: </label>
 
-        <p>Study notes, grammar explanations, and resources will live here.</p>
+          <select id="note-tag-filter">
+            <option value="all">All Tags</option>
+          </select>
+        </div>
+        <form id="note-form" class="note-form">
+          <input
+            id="note-title"
+            type="text"
+            placeholder="Note title..."
+            required
+          />
+
+          <textarea
+            id="note-content"
+            placeholder="Write your note..."
+            required
+          ></textarea>
+
+          <input
+            id="note-tag"
+            type="text"
+            placeholder="Tag, e.g. grammar, vocab, B2..."
+          />
+
+          <button type="submit">Save Note</button>
+        </form>
+
+        <div id="note-list"></div>
       </div>
     </main>
 
@@ -38,6 +67,7 @@
     </script>
 
     <script src="../js/language-overview.js"></script>
+    <script src="../js/language-notes.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
