@@ -4,7 +4,9 @@ const eventEndDate = document.getElementById("event-end-date");
 const eventTitle = document.getElementById("event-title");
 const eventNotes = document.getElementById("event-notes");
 const eventList = document.getElementById("event-list");
+const showEventForm = document.getElementById("show-event-form");
 
+const eventCreateCard = document.querySelector(".event-create-card");
 let events = JSON.parse(localStorage.getItem("events")) || [];
 
 const currentCalendarDate = new Date();
@@ -186,5 +188,13 @@ if (eventForm) {
     eventForm.reset();
   });
 }
+if (showEventForm) {
+  showEventForm.addEventListener("click", () => {
+    eventCreateCard.classList.toggle("hidden");
 
+    showEventForm.textContent = eventCreateCard.classList.contains("hidden")
+      ? "+ Add Event"
+      : "Close";
+  });
+}
 renderEvents();

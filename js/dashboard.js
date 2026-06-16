@@ -1,4 +1,5 @@
 const dashboardDate = document.getElementById("dashboard-date");
+const dashboardTime = document.getElementById("dashboard-time");
 const nextEventWidget = document.getElementById("next-event-widget");
 const goalSummaryWidget = document.getElementById("goal-summary-widget");
 const dailyWordsWidget = document.getElementById("daily-words-widget");
@@ -154,12 +155,22 @@ function renderRecentNotes() {
 function renderDashboardDate() {
   if (!dashboardDate) return;
 
-  dashboardDate.textContent = new Date().toLocaleDateString("en-US", {
+  const now = new Date();
+
+  dashboardDate.textContent = now.toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
     day: "numeric",
     year: "numeric",
   });
+
+  if (dashboardTime) {
+    dashboardTime.textContent = now.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+  }
 }
 renderNextEvent();
 renderGoalSummary();

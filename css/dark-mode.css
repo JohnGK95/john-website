@@ -46,3 +46,35 @@
 .dark-mode .goal-details {
   border-top-color: #333;
 }
+.dark-mode .overview-card,
+.dark-mode .dashboard-datetime,
+.dark-mode .quick-access-section,
+.dark-mode .dashboard-section,
+.dark-mode .event-create-card,
+.dark-mode .mini-calendar,
+.dark-mode .upcoming-events-panel {
+  background: #1d2723;
+  color: #f5f1e8;
+  border-color: #31443d;
+}
+
+.dark-mode .overview-card h2,
+.dark-mode .overview-card h3,
+.dark-mode .overview-card p,
+.dark-mode .dashboard-word span,
+.dark-mode .recent-note,
+.dark-mode .event-card h3 {
+  color: #f5f1e8;
+}
+
+.dark-mode .dashboard-word,
+.dark-mode .recent-note {
+  border-bottom-color: #31443d;
+}
+
+.dark-mode .dashboard-time,
+.dark-mode .event-date,
+.dark-mode .event-notes,
+.dark-mode .dashboard-card small {
+  color: #cfc8ba;
+}
