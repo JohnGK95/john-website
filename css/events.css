@@ -6,7 +6,7 @@
 
 .event-create-card,
 .mini-calendar {
-  background: white;
+  background: var(--paper);
 
   padding: 24px;
 
@@ -129,7 +129,7 @@
 }
 
 .event-card {
-  background: white;
+  background: var(--paper);
 
   padding: 22px;
 

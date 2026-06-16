@@ -10,49 +10,45 @@
     <div id="navbar"></div>
 
     <main class="page dashboard-page">
-      <div class="page-header">
-        <h1>Dashboard</h1>
+      <div class="dashboard-header">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h1>Dashboard</h1>
+          <p class="dashboard-subtitle">Your personal command center</p>
+        </div>
+
+        <div class="dashboard-date" id="dashboard-date"></div>
       </div>
 
-      <div class="dashboard-grid">
-        <a class="dashboard-card dashboard-events" href="#calendar">Events</a>
-        <a
-          class="dashboard-card dashboard-goals"
-          href="projects/2026-goals.html"
-          >2026 Goals</a
-        >
-        <a
-          class="dashboard-card dashboard-languages"
-          href="languages/index.html"
-          >Languages</a
-        >
-        <a class="dashboard-card dashboard-projects" href="projects/index.html"
-          >Projects</a
-        >
-      </div>
       <section class="dashboard-overview">
-        <div class="overview-card">
+        <div class="overview-card overview-next-event">
           <h2>Next Event</h2>
           <div id="next-event-widget"></div>
         </div>
 
-        <div class="overview-card">
+        <div class="overview-card overview-goals">
           <h2>Goal Progress</h2>
           <div id="goal-summary-widget"></div>
         </div>
 
-        <div class="overview-card">
+        <div class="overview-card overview-words">
           <h2>Daily Words</h2>
           <div id="daily-words-widget"></div>
         </div>
 
-        <div class="overview-card">
+        <div class="overview-card overview-notes">
           <h2>Recent Notes</h2>
           <div id="recent-notes-widget"></div>
         </div>
       </section>
+
       <section id="calendar" class="dashboard-section">
-        <h2>Events</h2>
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Planning</p>
+            <h2>Events</h2>
+          </div>
+        </div>
 
         <div class="events-dashboard">
           <div class="event-create-card">
@@ -60,7 +56,6 @@
 
             <form id="event-form">
               <input id="event-start-date" type="date" required />
-
               <input id="event-end-date" type="date" />
 
               <input
@@ -93,6 +88,58 @@
         <h3 class="upcoming-title">Upcoming Events</h3>
 
         <ul id="event-list"></ul>
+      </section>
+
+      <section class="quick-access-section">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Navigation</p>
+            <h2>Quick Access</h2>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <a class="dashboard-card dashboard-events" href="#calendar">
+            <span>📅</span>
+            <div>
+              <strong>Events</strong>
+              <small>Plans and reminders</small>
+            </div>
+          </a>
+
+          <a
+            class="dashboard-card dashboard-goals"
+            href="projects/2026-goals.html"
+          >
+            <span>🎯</span>
+            <div>
+              <strong>2026 Goals</strong>
+              <small>Track milestones</small>
+            </div>
+          </a>
+
+          <a
+            class="dashboard-card dashboard-languages"
+            href="languages/index.html"
+          >
+            <span>🌏</span>
+            <div>
+              <strong>Languages</strong>
+              <small>Notes and vocabulary</small>
+            </div>
+          </a>
+
+          <a
+            class="dashboard-card dashboard-projects"
+            href="projects/index.html"
+          >
+            <span>🛠️</span>
+            <div>
+              <strong>Projects</strong>
+              <small>Ideas and creations</small>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 

@@ -1,6 +1,30 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard-subtitle {
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.dashboard-date {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  box-shadow: var(--shadow);
+  font-weight: bold;
+  color: var(--forest);
+}
+
 .dashboard-overview {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.4fr 1fr 1fr;
   gap: 20px;
   margin: 32px 0;
 }
@@ -8,9 +32,26 @@
 .overview-card {
   background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 22px;
   padding: 24px;
   box-shadow: var(--shadow);
+}
+
+.overview-next-event {
+  grid-row: span 2;
+  border-left: 8px solid var(--forest);
+}
+
+.overview-goals {
+  border-left: 8px solid var(--cinnamon);
+}
+
+.overview-words {
+  border-left: 8px solid var(--matcha);
+}
+
+.overview-notes {
+  border-left: 8px solid var(--terracotta);
 }
 
 .overview-card h2 {
@@ -37,10 +78,50 @@
 }
 
 .dashboard-word span {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
+.section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-heading-row h2 {
+  margin: 0;
+}
+
+.quick-access-section {
+  margin-top: 40px;
+}
+
+.dashboard-grid {
+  margin-top: 16px;
+}
+
+.dashboard-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.dashboard-card span {
+  font-size: 28px;
+}
+
+.dashboard-card div {
+  display: grid;
+  gap: 4px;
+}
+
+.dashboard-card small {
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.dark-mode .dashboard-date,
 .dark-mode .overview-card {
   background: #1d2723;
   border-color: #31443d;
@@ -52,12 +133,21 @@
 }
 
 .dark-mode .dashboard-word strong,
-.dark-mode .recent-note strong {
+.dark-mode .recent-note strong,
+.dark-mode .dashboard-date {
   color: var(--matcha);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .dashboard-overview {
     grid-template-columns: 1fr;
+  }
+
+  .overview-next-event {
+    grid-row: auto;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
   }
 }

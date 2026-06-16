@@ -1,3 +1,4 @@
+const dashboardDate = document.getElementById("dashboard-date");
 const nextEventWidget = document.getElementById("next-event-widget");
 const goalSummaryWidget = document.getElementById("goal-summary-widget");
 const dailyWordsWidget = document.getElementById("daily-words-widget");
@@ -150,8 +151,18 @@ function renderRecentNotes() {
     )
     .join("");
 }
+function renderDashboardDate() {
+  if (!dashboardDate) return;
 
+  dashboardDate.textContent = new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
 renderNextEvent();
 renderGoalSummary();
 renderDailyWords();
 renderRecentNotes();
+renderDashboardDate();

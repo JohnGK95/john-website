@@ -10,12 +10,12 @@
   display: flex;
   align-items: center;
   padding: 22px;
-  background: white;
+  background: var(--paper);
   color: var(--ink);
   text-decoration: none;
   border-radius: 14px;
   font-size: 20px;
   font-weight: bold;
-  box-shadow: 0 6px 18px rgba(34, 75, 64, 0.08);
+  box-shadow: var(--shadow);
   border: 1px solid var(--border);
 }

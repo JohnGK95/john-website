@@ -19,7 +19,7 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   font-family: inherit;
-  background: white;
+  background: var(--paper);
 }
 
 .goal-form textarea,
@@ -29,11 +29,11 @@
 }
 
 .goal-card {
-  background: white;
+  background: var(--paper);
   border-radius: 14px;
   padding: 22px 28px;
   margin-top: 16px;
-  box-shadow: 0 6px 18px rgba(34, 75, 64, 0.08);
+  box-shadow: var(--shadow);
   border: 1px solid var(--border);
 }
 
@@ -125,8 +125,8 @@
   height: 36px;
   padding: 0;
   border-radius: 50%;
-  background: #eee4d5;
-  color: var(--ink);
+  background: var(--paper-soft);
+  color: var(--text);
   display: inline-flex;
   align-items: center;
   justify-content: center;
