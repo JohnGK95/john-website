@@ -31,7 +31,7 @@ if (navbar) {
         </div>
 
         <a href="/contact.html">Contact</a>
-
+<a href="/settings.html">Settings</a>
         <button id="theme-toggle" type="button">🌙</button>
       </div>
     </nav>
