@@ -1,3 +1,4 @@
+@import url("variables.css");
 @import url("global.css");
 @import url("navbar.css");
 @import url("dashboard.css");
@@ -9,3 +10,4 @@
 @import url("dark-mode.css");
 @import url("animations.css");
 @import url("responsive.css");
+@import url("dashboard-widgets.css");

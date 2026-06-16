@@ -2,23 +2,11 @@
   box-sizing: border-box;
 }
 
-:root {
-  --forest: #224b40;
-  --matcha: #a8b88f;
-  --cinnamon: #a45c40;
-  --cream: #f7f3ea;
-  --paper: #fffaf2;
-  --ink: #1f2a26;
-  --muted: #6b746f;
-  --border: #e4ddd0;
-  --shadow: 0 8px 24px rgba(34, 75, 64, 0.12);
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: var(--cream);
-  color: var(--ink);
+  color: var(--text);
 }
 
 button {

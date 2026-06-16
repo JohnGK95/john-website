@@ -1,0 +1,25 @@
+:root {
+  --forest: #224b40;
+  --forest-dark: #17382f;
+
+  --matcha: #9caf88;
+  --matcha-light: #e0e8cf;
+
+  --cinnamon: #b96545;
+  --cinnamon-light: #e4b39b;
+
+  --terracotta: #c97c5d;
+
+  --cream: #f0dcb9;
+  --paper: #f5e7cc;
+  --paper-soft: #f9d5a4;
+
+  --text: #202a26;
+  --muted: #6f7772;
+
+  --border: #d5c7b3;
+
+  --shadow: 0 14px 34px rgba(34, 75, 64, 0.14);
+
+  --accent: var(--forest);
+}
